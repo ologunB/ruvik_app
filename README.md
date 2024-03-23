@@ -33,7 +33,7 @@ Mystery Dining Edition is a Flutter-based mobile application designed to offer u
    flutter pub get
 4. **Add your Yelp API Key:**
 
-Open `lib/views/widgets/utils.dart` and replace `YOUR_YELP_API_KEY` with your actual Yelp Fusion API key.
+Open `lib/views/widgets/utils.dart` and replace `YOUR_YELP_API_KEY` with your actual Yelp Fusion API key and ENABLE developer mode when creating the key.
 ```dart
 const String yelpToken = 'YOUR_YELP_API_KEY';
 ```
@@ -49,7 +49,6 @@ const String yelpToken = 'YOUR_YELP_API_KEY';
 - Log your adventures and share your experiences with the community.
 - Explore themed adventures for a curated dining experience like no other.
 
-### Yelp API
 # Yelp API Integration in Mystery Dining Edition
 
 ## Overview
@@ -109,6 +108,10 @@ Gathers user reviews for a specified restaurant.
 - Specifies request parameters to refine the reviews fetched.
 - Converts the response into a list of `ReviewModel` instances.
 
+#### Important Note
+- This doesnt work as it returns a 404 error of unavailable resource, many issues on github captures the same error
+- I added a demo review data there so as to show review after loading
+
 ### 5. `getCategories()`
 
 #### Purpose
@@ -121,12 +124,30 @@ Fetches a comprehensive list of restaurant categories from Yelp, aiding in searc
 - Requests the full list of categories via a simple `GET` call.
 - Parses the response, offering a list of `Categories` instances for app filters.
 
+#### Important Note
+- This returns a large dataset and cannot be filtered
+- I added a demo review data there so as to show categories without loading from the endpoint
+- This is in the Utils class.
+- All data matches with restaurant hence why its being used.
+
+
 ## Integration and Usage
 
 The `RestaurantsApi` class is integral to the app, enabling direct access to Yelp's dataset for features like Mystery Search, Culinary Roulette, and Themed Adventures. This abstraction not only simplifies Yelp API interactions but also enriches the user experience by seamlessly providing relevant, user-tailored dining suggestions.
 
+## Creativity
+The  `term` in search was a major value I used to get the themed adventures, for roulette, after randomly choosing a number, we take the equivalent of the index in the list. For Mystery, I used the term 'Dining' and set the preferences of the user to filter values.
+
 ### Contribution
 We welcome contributions to improve Mystery Dining Edition! Please feel free to fork the repository, make your changes, and submit a pull request.
+
+### Improvements to be made/Upcoming features
+- Notification if there are new Restaurants
+- User lat and long instead of location to make search more precise
+- Handle error better
+- Add profile page
+- Research on why review doesnt work and fix
+- Make user create review and rate restaurant
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
