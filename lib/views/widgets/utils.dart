@@ -39,6 +39,9 @@ class Utils {
     await SystemChannels.textInput.invokeMethod<dynamic>('TextInput.hide');
   }
 
+  static String get yelpToken =>
+      'lPhPjeoB8YU2_ByQ8WOdLNHBsXKtfGn7e61fvhDGwW470p-gJmY6XPNN61DwHi-ZDk0Um14Jf1Ph0Di21b1hOtL_qXjJ3-S2bxTN-aUDQGSQidoMWCQbtZanL5L9ZXYx';
+
   static String get googleKey => 'AIzaSyDa-Rb_DceGzTMkKuSPdPpMevXbzu1IKUY';
 
   static List<String> categoryData = [

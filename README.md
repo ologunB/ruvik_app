@@ -132,11 +132,3 @@ We welcome contributions to improve Mystery Dining Edition! Please feel free to 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 This Markdown-formatted README file provides a structured overview of your project, including an introduction, features list, setup instructions, and additional information on contributing and licensing. Adjust the content as necessary to fit your project's specifics.
-
-
-
-
-
-
-
-

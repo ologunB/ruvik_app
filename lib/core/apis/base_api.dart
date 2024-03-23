@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
+import '../../views/widgets/utils.dart';
+
 export 'dart:io';
 
 export 'package:dio/dio.dart';
@@ -25,9 +27,7 @@ class BaseAPI {
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (req, handler) {
-          String? token =
-              'lPhPjeoB8YU2_ByQ8WOdLNHBsXKtfGn7e61fvhDGwW470p-gJmY6XPNN61DwHi-ZDk0Um14Jf1Ph0Di21b1hOtL_qXjJ3-S2bxTN-aUDQGSQidoMWCQbtZanL5L9ZXYx';
-          req.headers['Authorization'] = 'Bearer $token';
+          req.headers['Authorization'] = 'Bearer ${Utils.yelpToken}';
           return handler.next(req);
         },
         onResponse: (res, handler) {
