@@ -1,0 +1,70 @@
+name: lendo
+description: Resturants
+publish_to: none
+version: 1.0.2+2
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  another_flushbar: ^1.12.30
+  cached_network_image: ^3.3.1
+  collection: ^1.18.0
+  confetti: ^0.7.0
+  device_info_plus: ^10.0.1
+  dio: ^5.4.1
+  flutter_google_maps_webservices: ^1.1.1
+  flutter_screenutil: ^5.9.0
+  flutter_staggered_grid_view: ^0.7.0
+  get_it: ^7.6.7
+  google_fonts: ^6.2.1
+  hive_flutter: ^1.1.0
+  intl: ^0.19.0
+  logger: ^2.1.0
+  provider: ^6.1.2
+  roulette: ^0.1.5
+  rxdart: ^0.27.7
+  share_plus: ^8.0.2
+  shimmer: ^3.0.0
+  timeago: ^3.6.1
+  flutter_rating_bar: ^4.0.1
+  url_launcher: ^6.2.5
+  animated_text_kit: ^4.2.2
+
+dev_dependencies:
+  flutter_native_splash: ^2.4.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.1
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/logo-text.png
+  android_12:
+    image: assets/images/logo.png
+    icon_background_color: "#FFFFFF"
+    image_dark: assets/images/logo.png
+    icon_background_color_dark: "#FFFFFF"
+  android: true
+  ios: true
+  web: true
+  fullscreen: false
+  android_gravity: center
+  ios_content_mode: center
+  web_image_mode: center
+flutter_launcher_icons:
+  android: true
+  adaptive_icon_background: "#FFFFFF"
+  ios: true
+  image_path_ios: "assets/images/logo-text.png"
+  image_path: "assets/images/logo-text.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+# dart run flutter_launcher_icons
+# dart run flutter_native_splash:create
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
