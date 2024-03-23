@@ -266,6 +266,37 @@ class Reviews extends StatelessWidget {
                   SizedBox(height: 70.h, child: const HomeShimmer())
                 ],
               ),
+            if (model.reviews == null && !model.busy)
+              Padding(
+                padding: EdgeInsets.all(40.h),
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      RevText(
+                        '${model.error}',
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.grey,
+                        bottom: 30.h,
+                        align: TextAlign.center,
+                      ),
+                      RevButton(
+                        'Try Again',
+                        buttonColor: AppColors.white,
+                        height: 40,
+                        fontSize: 13.sp,
+                        fontWeight: FontWeight.w500,
+                        textColor: AppColors.primary,
+                        borderColor: AppColors.primary,
+                        onPressed: () {
+                          model.getAll();
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             if (!model.busy && model.reviews != null)
               ListView.builder(
                 itemCount: model.reviews!.length,
