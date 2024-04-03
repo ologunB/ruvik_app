@@ -65,6 +65,7 @@ class _FilterScreenState extends State<FilterScreen> {
         padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 10.h),
         children: [
           RevField(
+            key: const Key('location'),
             labelText: 'Location',
             hintText: 'Search for address',
             vertPadding: 13,
@@ -103,6 +104,7 @@ class _FilterScreenState extends State<FilterScreen> {
             children: Utils.categories.map((value) {
               bool isPresent = selectedTypes.contains(value);
               return InkWell(
+                key: Key(value.title!),
                 onTap: () {
                   if (isPresent) {
                     selectedTypes.remove(value);

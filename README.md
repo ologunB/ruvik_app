@@ -19,6 +19,15 @@ Mystery Dining Edition is a Flutter-based mobile application designed to offer u
 - Android Studio or Visual Studio Code
 - A valid Yelp Fusion API key
 
+### Integration Test
+
+1. **Dinner Mystery:**
+
+   ```bash
+   flutter test ./integration_test/test1.dart
+
+2**Waiting:**
+
 ### Installation
 
 1. **Clone the repository:**
